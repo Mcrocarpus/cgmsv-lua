@@ -10,7 +10,7 @@ regGlobalEvent("ShutDownEvent", OrderedCallback(function()
 end, -9999999999), 'System');
 
 function _G.moduleInitial()
-  if _initialed or _HookFunc == false then
+  if _initialed then
     return
   end
   _initialed = true;

@@ -1,9 +1,5 @@
 ---@meta _
 
----@since HOOK:v0.2.30
----@return string
-function getHookVer() end
-
 ---加载Module模块
 function loadModule(string) end
 
@@ -69,53 +65,6 @@ function SQL.sqlValue(s) end
 ---@param sql  string 要执行的Mysql查询语句。
 ---@return string[][] @table[a][b]a为行数，b为列数
 function SQL.querySQL(sql, returnNil) end
-
----获取装备的武器 ItemIndex及位置
----@param charIndex number
----@return number @装备位置
----@return number @装备类型
----@return number @itemIndex
-function Char.GetWeapon(charIndex) end
-
----检测index是否正确
----@param charIndex number
-function Char.IsValidCharIndex(charIndex) end
-
----获取空的道具栏
----@param charIndex number
----@return number @slot
-function Char.GetEmptyItemSlot(charIndex) end
-
----获取道具所在栏位
----@param charIndex number
----@param itemIndex number
----@return number @slot
-function Char.GetItemSlot(charIndex, itemIndex) end
-
----获取空的宠物栏
----@param charIndex number
----@return number @slot
-function Char.GetEmptyPetSlot(charIndex) end
-
----是否为宠物
----@param charIndex number
----@return boolean
-function Char.IsPet(charIndex) end
-
----是否为玩家
----@param charIndex number
----@return boolean
-function Char.IsPlayer(charIndex) end
-
----是否为怪物
----@param charIndex number
----@return boolean
-function Char.IsEnemy(charIndex) end
-
----是否为NPC
----@param charIndex number
----@return boolean
-function Char.IsNpc(charIndex) end
 
 ---生成新Migration
 ---@param type string 类型标识
