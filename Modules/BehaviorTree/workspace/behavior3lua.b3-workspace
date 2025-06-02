@@ -2,11 +2,11 @@
   "files": [
     {
       "path": "trees/hero.json",
-      "desc": "è‹±é›„æµ‹è¯•AI"
+      "desc": "Ó¢ĞÛ²âÊÔAI"
     },
     {
       "path": "trees/monster.json",
-      "desc": "æ€ªç‰©æµ‹è¯•AI"
+      "desc": "¹ÖÎï²âÊÔAI"
     },
     {
       "path": "trees/test-parallel-with-wait.json",
