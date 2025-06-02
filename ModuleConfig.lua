@@ -11,3 +11,4 @@ loadModule('autoRegister')
 loadModule('autoUnlock')
 loadModule('http')
 
+loadModule('YunoGasai')

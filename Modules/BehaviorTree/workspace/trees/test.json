@@ -1,0 +1,26 @@
+{
+  "version": "1.8.1",
+  "name": "test",
+  "prefix": "",
+  "group": [],
+  "import": [],
+  "vars": [],
+  "root": {
+    "id": "1",
+    "name": "Sequence",
+    "input": [],
+    "output": [],
+    "args": {},
+    "children": [
+      {
+        "id": "2",
+        "name": "Log",
+        "input": [],
+        "output": [],
+        "args": {
+          "message": "test 测试"
+        }
+      }
+    ]
+  }
+}
