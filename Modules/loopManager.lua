@@ -1,4 +1,5 @@
 ---循环管理
+---@class loopManager
 local Module = ModuleBase:createModule('loopManager')
 
 --循环函数

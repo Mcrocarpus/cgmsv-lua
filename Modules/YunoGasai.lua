@@ -1,17 +1,13 @@
 ---我妻由乃！
 local Module = ModuleBase:createModule('YunoGasai')
-local loopManager = getModule("loopManager")
-local tree = BT.createTree("YunoGasai", "test.json", {})
 
-function run()
-  tree:run()
-end
+local loopManager = getModule("loopManager") ---@type loopManager
+local tree
 
 function Module:onLoad()
   self:logInfo('load')
-  self.npc = self:NPC_createNormal("我妻由乃", 160580, { map = 1000, x = 225, y = 84, direction = 4, mapType = 0 });
   self:regCallback("TalkEvent", Func.bind(self.onTalkEvent, self));
-
+  self:init()
   loopManager:regCommand("YunoGasai", run, 0, 3000)
   --巡逻+搜索敌人
   --追踪敌人
@@ -24,6 +20,16 @@ function Module:onLoad()
   ----战斗成功
   ----怪物消失几秒
   ----怪物重置
+end
+
+function run()
+  tree:run()
+end
+
+function Module:init()
+  self.npc = self:NPC_createNormal("我妻由乃", 160580, { map = 1000, x = 225, y = 84, direction = 4, mapType = 0 });
+  tree = BT.createTree("YunoGasai", "YunoGasai.json", { owner = self.npc })
+  loopManager:regCommand("YunoGasai", run, 0, 3000)
 end
 
 function Module:onTalkEvent(player, msg)
