@@ -1,6 +1,7 @@
 ---我妻由乃！
 local Module = ModuleBase:createModule('YunoGasai')
 
+local process = require "lua.Modules.BehaviorTree.process"
 local loopManager = getModule("loopManager") ---@type loopManager
 local tree
 
@@ -27,6 +28,9 @@ function run()
 end
 
 function Module:init()
+  BT.reInitProcess(function()
+    return process
+  end)
   self.npc = self:NPC_createNormal("我妻由乃", 160580, { map = 1000, x = 225, y = 84, direction = 4, mapType = 0 });
   tree = BT.createTree("YunoGasai", "YunoGasai.json", { owner = self.npc })
   loopManager:regCommand("YunoGasai", run, 0, 3000)

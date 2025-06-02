@@ -36,4 +36,5 @@ return {
   Wait               = require "lua.libs.behavior3lua.behavior3.nodes.actions.wait",
   Concat             = require "lua.libs.behavior3lua.behavior3.nodes.actions.concat",
   WaitForCount       = require "lua.libs.behavior3lua.behavior3.nodes.actions.wait_for_count",
+  FindEnemy          = require "lua.Modules.BehaviorTree.conditions.find_enemy",
 }

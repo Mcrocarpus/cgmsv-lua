@@ -1,6 +1,6 @@
 {
   "version": "1.8.1",
-  "name": "test",
+  "name": "YunoGasai",
   "prefix": "",
   "group": [],
   "import": [],
@@ -14,11 +14,13 @@
     "children": [
       {
         "id": "2",
-        "name": "Log",
+        "name": "FindEnemy",
         "input": [],
-        "output": [],
+        "output": [
+          "enemy"
+        ],
         "args": {
-          "message": "test ≤‚ ‘"
+          "distance": 30
         }
       }
     ]
