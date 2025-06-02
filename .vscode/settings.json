@@ -62,5 +62,10 @@
     "files.candidateGuessEncodings": [
         "utf8",
         "gb2312"
-    ]
+    ],
+    "Lua.format.defaultConfig": {
+        "indent_style": "space",
+        "indent_size": "2",
+        "continuation_indent_size": "2"
+    },
 }
