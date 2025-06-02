@@ -62,5 +62,18 @@
     "files.candidateGuessEncodings": [
         "utf8",
         "gb2312"
-    ]
+    ],
+    // 全局设置
+    "[lua]": {
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true
+    },
+    // 针对子模块路径的特殊设置
+    "files.watcherExclude": {
+        "**/.git/**": true
+    },
+    "[lua][submodule/**]": {
+        "editor.detectIndentation": false,
+        "editor.tabSize": 2
+    }
 }
