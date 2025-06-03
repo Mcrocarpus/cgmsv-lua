@@ -1,9 +1,9 @@
--- MoveToPos
+-- WarpToPos
 
 local bret = require 'lua.libs.behavior3lua.behavior3.behavior_ret'
 
 local M = {
-  name = 'MoveToPos',
+  name = 'WarpToPos',
   type = 'Action',
   desc = '移动到坐标',
   args = {
@@ -29,7 +29,7 @@ local M = {
     },
   },
   doc = [[
-        + 怪物刷新
+        + 怪物传送到指定位置
     ]]
 }
 
