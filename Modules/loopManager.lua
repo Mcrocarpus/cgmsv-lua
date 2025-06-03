@@ -4,7 +4,7 @@ local Module = ModuleBase:createModule('loopManager')
 
 --Ñ­»·º¯Êý
 local commands = {}
-local CD = 1000
+local CD = 100
 
 function Module:onLoad()
 	self:logInfo('load')
@@ -20,7 +20,9 @@ function Module:onLoopEvent(charIndex)
 			value.time = value.time - value.delta
 			local ok, ret = pcall(value.fn)
 			if ok then
-				value.count = value.count - 1
+				if value.count >= 0 then
+					value.count = value.count - 1
+				end
 				if value.count == 0 then
 					commands[key] = nil;
 				end

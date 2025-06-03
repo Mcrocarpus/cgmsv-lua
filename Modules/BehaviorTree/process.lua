@@ -33,8 +33,9 @@ return {
   Push               = require "lua.libs.behavior3lua.behavior3.nodes.actions.push",
   Random             = require "lua.libs.behavior3lua.behavior3.nodes.actions.random",
   RandomIndex        = require "lua.libs.behavior3lua.behavior3.nodes.actions.random_index",
-  Wait               = require "lua.libs.behavior3lua.behavior3.nodes.actions.wait",
   Concat             = require "lua.libs.behavior3lua.behavior3.nodes.actions.concat",
   WaitForCount       = require "lua.libs.behavior3lua.behavior3.nodes.actions.wait_for_count",
+
   FindEnemy          = require "lua.Modules.BehaviorTree.conditions.find_enemy",
+  WaitCount          = require "lua.Modules.BehaviorTree.conditions.wait_count",
 }

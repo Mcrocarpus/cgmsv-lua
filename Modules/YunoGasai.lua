@@ -27,12 +27,16 @@ function Module:init()
     return process
   end)
   self.npc = self:NPC_createNormal("我妻由乃", 160580, { map = 777, x = 2, y = 2, direction = 4, mapType = 0 });
-  local env = { owner = self.npc, finder = self:getFinder() }
+  local env = {
+    owner = self.npc,
+    time_count = 0,
+    finder = self:getFinder(),
+  }
   self.tree = BT.createTree("YunoGasai", "YunoGasai.json", env)
   run = function()
     self.tree:run()
   end
-  loopManager:regCommand("YunoGasai", run, 0, 1000)
+  loopManager:regCommand("YunoGasai", run, 5, 1000)
 end
 
 ---初始化寻路

@@ -15,7 +15,7 @@ local M = {
       desc = "追踪距离"
     }
   },
-  output = { "目标CharIndex" },
+  output = { "目标" },
   doc = [[
         + 找到返回目标CharIndex
         + 没找到返回失败
@@ -46,9 +46,9 @@ function M.run(node, env)
     return (dxa * dxa + dya * dya) < (dxb * dxb + dyb * dyb)
   end)
 
-  local enemy = players[1]
-  local distance = pow(Char.GetData(enemy, CONST.对象_X) - x, 2) + pow(Char.GetData(enemy, CONST.对象_Y) - y, 2)
-  return ret(distance < pow(node.args.distance), 2), enemy
+  local target = players[1]
+  local distance = pow(Char.GetData(target, CONST.对象_X) - x, 2) + pow(Char.GetData(target, CONST.对象_Y) - y, 2)
+  return ret(distance < pow(node.args.distance), 2), target
 end
 
 return M

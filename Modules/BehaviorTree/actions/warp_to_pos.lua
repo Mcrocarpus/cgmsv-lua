@@ -5,7 +5,7 @@ local bret = require 'lua.libs.behavior3lua.behavior3.behavior_ret'
 local M = {
   name = 'WarpToPos',
   type = 'Action',
-  desc = '移动到坐标',
+  desc = '传送到坐标',
   args = {
     {
       name = 'map',
