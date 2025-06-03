@@ -37,5 +37,5 @@ return {
   WaitForCount       = require "lua.libs.behavior3lua.behavior3.nodes.actions.wait_for_count",
 
   FindEnemy          = require "lua.Modules.BehaviorTree.conditions.find_enemy",
-  WaitCount          = require "lua.Modules.BehaviorTree.conditions.wait_count",
+  WaitCount          = require "lua.Modules.BehaviorTree.actions.wait_count",
 }
