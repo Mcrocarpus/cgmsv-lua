@@ -6,7 +6,7 @@ local behavior_node = require "lua.libs.behavior3lua.behavior3.behavior_node"
 local sample_process = require "lua.libs.behavior3lua.behavior3.sample_process"
 
 local function loadTree(path)
-    local file, err = io.open('lua/Modules/BehaviorTree/workspace/trees/' .. path, 'r')
+    local file, err = io.open('lua/Modules/BehaviorTree/workspace/' .. path, 'r')
     assert(file, err)
     local str = file:read('*a')
     file:close()
