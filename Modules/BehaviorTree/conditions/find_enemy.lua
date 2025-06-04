@@ -32,7 +32,7 @@ function M.run(node, env)
   local floor = Char.GetData(owner, CONST.对象_地图)
   local x = Char.GetData(owner, CONST.对象_X)
   local y = Char.GetData(owner, CONST.对象_Y)
-
+  -- print("find enemy no player")
   local players = NLG.GetMapPlayer(map, floor)
   if type(players) ~= "table" then
     return bret.FAIL, nil
@@ -48,7 +48,8 @@ function M.run(node, env)
 
   local target = players[1]
   local distance = pow(Char.GetData(target, CONST.对象_X) - x, 2) + pow(Char.GetData(target, CONST.对象_Y) - y, 2)
-  return ret(distance < pow(node.args.distance), 2), target
+  print("find enemy distance", distance, pow(node.args.distance, 2))
+  return ret(distance < pow(node.args.distance, 2)), target
 end
 
 return M

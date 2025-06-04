@@ -12,7 +12,7 @@ function Module:onLoad()
   --进入战斗
   --战斗中
   ----战斗失败
-  ----延迟几秒？
+  ----延迟几秒
   ----继续追击 or 怪物重置
 
   ----战斗成功
@@ -26,7 +26,7 @@ function Module:init()
     local process = require "lua.Modules.BehaviorTree.process"
     return process
   end)
-  self.npc = self:NPC_createNormal("我妻由乃", 160580, { map = 777, x = 2, y = 2, direction = 4, mapType = 0 });
+  self.npc = self:NPC_createNormal("我妻由乃", 160580, { map = 1000, x = 240, y = 88, direction = 4, mapType = 0 });
   local env = {
     owner = self.npc,
     time_count = 0,
@@ -36,7 +36,7 @@ function Module:init()
   run = function()
     self.tree:run()
   end
-  loopManager:regCommand("YunoGasai", run, 5, 1000)
+  loopManager:regCommand("YunoGasai", run, 0, 100)
 end
 
 ---初始化寻路
@@ -46,7 +46,9 @@ function Module:getFinder()
   local Grid = require("lua.Modules.jumper.grid")
   local Pathfinder = require("lua.Modules.jumper.pathfinder")
   local grid = Grid(self:cookMap(0, 1000))
-  return Pathfinder(grid, 'ASTAR', walkable)
+  local finder = Pathfinder(grid, 'ASTAR', walkable)
+  -- finder:setTunnelling(true)
+  return finder
 end
 
 ---制作障碍地图
@@ -71,6 +73,7 @@ end
 
 function Module:onUnload()
   self:logInfo('unload');
+  loopManager:unRegCommand("YunoGasai")
 end
 
 return Module;

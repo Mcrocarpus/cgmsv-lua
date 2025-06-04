@@ -25,11 +25,17 @@ local function getDirection(startX, startY, endX, endY)
     degrees = degrees + 360
   end
   local direction = math.fmod(degrees / 45, 8)
-  print(dx, dy, direction)
+  -- print(dx, dy, direction)
   return direction
 end
 
+local function walkMove(owner, node1, x2, y2)
+  local dir = getDirection(node1:getX(), node1:getY(), x2, y2)
+  return NLG.WalkMove(owner, dir)
+end
+
 function M.run(node, env, target)
+  -- print("move to target ", target)
   if not target then
     return bret.FAIL
   end
@@ -43,12 +49,21 @@ function M.run(node, env, target)
   local path = finder:getPath(ownerX, ownerY, targetX, targetY)
 
   if not path then
+    -- print("move to target no path")
     return bret.FAIL
   end
-  local nodes = path:nodes()
-  local dir = getDirection(nodes[1]:getX(), nodes[1]:getY(), nodes[2]:getX(), nodes[2]:getY())
-  NLG.WalkMove(owner, dir)
+  local nodes = path._nodes
+  if #nodes < 2 then
+    return bret.SUCCESS
+  end
 
+  --ÁÙÊ±·½·¨
+  if walkMove(owner, nodes[1], nodes[2]:getX(), nodes[2]:getY()) != 0 then
+    if walkMove(owner, nodes[1], nodes[1]:getX(), nodes[2]:getY()) != 0 then
+      walkMove(owner, nodes[1], nodes[2]:getX(), nodes[1]:getY())
+    end
+  end
+  print("move to target move once")
   return bret.SUCCESS
 end
 
