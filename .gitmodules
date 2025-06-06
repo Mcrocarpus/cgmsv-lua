@@ -5,4 +5,4 @@
 [submodule "Modules/Private"]
 	path = Modules/Private
 	url = https://github.com/Mcrocarpus/cgmsv-lua-private.git
-	branch = master
+	branch = main
