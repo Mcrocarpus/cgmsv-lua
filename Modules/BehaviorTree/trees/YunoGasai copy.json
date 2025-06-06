@@ -1,0 +1,46 @@
+{
+  "version": "1.8.1",
+  "name": "YunoGasai",
+  "prefix": "",
+  "group": [],
+  "import": [],
+  "vars": [],
+  "root": {
+    "id": "1",
+    "name": "Sequence",
+    "input": [],
+    "output": [],
+    "args": {},
+    "children": [
+      {
+        "id": "2",
+        "name": "FindEnemy",
+        "input": [],
+        "output": [
+          "target"
+        ],
+        "args": {
+          "distance": 20
+        }
+      },
+      {
+        "id": "3",
+        "name": "MoveToTarget",
+        "input": [
+          "target"
+        ],
+        "output": [],
+        "args": {}
+      },
+      {
+        "id": "4",
+        "name": "WaitCount",
+        "input": [],
+        "output": [],
+        "args": {
+          "count": 4
+        }
+      }
+    ]
+  }
+}
