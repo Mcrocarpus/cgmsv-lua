@@ -1,6 +1,8 @@
 [submodule "libs/behavior3lua"]
 	path = libs/behavior3lua
 	url = https://github.com/Mcrocarpus/behavior3lua.git
+	branch = master
 [submodule "Modules/Private"]
 	path = Modules/Private
 	url = https://github.com/Mcrocarpus/cgmsv-lua-private.git
+	branch = master
