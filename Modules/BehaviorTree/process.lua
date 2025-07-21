@@ -23,7 +23,7 @@ return {
 
   FindEnemy          = require "lua.Modules.BehaviorTree.conditions.find_enemy",
   OutRange           = require "lua.Modules.BehaviorTree.conditions.out_range",
- 
+
   -- 行为节点
   Calculate          = require "lua.libs.behavior3lua.behavior3.nodes.actions.calculate",
   Clear              = require "lua.libs.behavior3lua.behavior3.nodes.actions.clear",
@@ -43,4 +43,5 @@ return {
   Random             = require "lua.Modules.BehaviorTree.actions.random",
   Talk               = require "lua.Modules.BehaviorTree.actions.talk",
   MoveToDirection    = require "lua.Modules.BehaviorTree.actions.move_to_direction",
+  MoveToTarget       = require "lua.Modules.BehaviorTree.actions.move_to_target",
 }
