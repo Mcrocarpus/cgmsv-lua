@@ -7,38 +7,10 @@ CONST.BATTLE_SurpriseFlag = {
   ---偷袭
   Surprise = 1,
   ---被偷袭
-  BeSurprise = 2,
+  BeSurprise = 66,
 }
 
-CONST.DamageFlags = {
-  Normal = 0,
-  Critical = 1,
-  Miss = 2,
-  Dodge = 3,
-  ---防御？
-  Guard = 4,
-  ---魔法
-  Magic = 5,
-  ---中毒
-  Poison = 6,
-  ---醉酒
-  Drunk = 7,
-  ---合击
-  Combo = 8,
-  ---合击暴击
-  ComboCritical = 9,
-  ---合并最终伤害
-  ComboFinal = 10,
-  ---战栗
-  FpDamage = 11,
-  ---ComboFinal = 10,
-  Boom = 12,
-  EarthQuake = 13,
-  ---魔法暴击
-  MagicCritical = 14,
-  ---魔反结算伤害
-  MagicReflection = 15,
-}
+
 
 CONST.DamageFlagsEx = {
   ---无
