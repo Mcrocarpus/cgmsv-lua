@@ -64,7 +64,7 @@ function Shop:onLoad()
     47763, 16000, 16001, 16002, 45950, 45981, 45969
   });
   self:NPC_createShop('±‰…Ì∑∑¬Ù', 104863, { map = 1000, mapType = 0, x = 223, y = 91, direction = 0 }, shopConfig, {
-    46329, 70001,
+    46329,
   });
 end
 
